@@ -128,17 +128,6 @@ const Contact = () => {
         </div>
       </section>
 
-      <motion.section
-        className="contact-image-section"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        <div className="container">
-          <img src="/himayah-solutions-Assets/5.png" alt="Contact Us" />
-        </div>
-      </motion.section>
     </div>
   )
 }

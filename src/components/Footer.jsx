@@ -34,12 +34,12 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Services</h4>
             <ul>
-              <li>vCISO</li>
-              <li>Risk Assessments</li>
-              <li>Security Architecture</li>
-              <li>Compliance & Regulatory</li>
-              <li>Penetration Testing</li>
-              <li>Incident Response</li>
+              <li><Link to="/services/vciso">vCISO</Link></li>
+              <li><Link to="/services/enterprise-security">Enterprise Security</Link></li>
+              <li><Link to="/services/digital-trust-privacy">Digital Trust & Privacy</Link></li>
+              <li><Link to="/services/cyber-strategy-transformation">Cyber Strategy & Transformation</Link></li>
+              <li><Link to="/services/cyber-defense-resilience">Cyber Defense & Resilience</Link></li>
+              <li><Link to="/services">View All Services</Link></li>
             </ul>
           </div>
 

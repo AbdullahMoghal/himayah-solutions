@@ -140,6 +140,9 @@ const Services = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
+        <div className="floating-shape shape-1"></div>
+        <div className="floating-shape shape-2"></div>
+        <div className="floating-shape shape-3"></div>
         <div className="container">
           <h1>Our Services</h1>
           <p className="hero-description">
@@ -153,6 +156,44 @@ const Services = () => {
 
       {/* Services Grid */}
       <section className="services-explore">
+        <div className="globe-container">
+          <div className="globe-3d">
+            {/* Longitude lines - vertical circles rotated around Y axis */}
+            {[...Array(12)].map((_, i) => {
+              const angle = i * 30
+              return (
+                <div
+                  key={`long-${i}`}
+                  className="globe-ring longitude-ring"
+                  style={{
+                    transform: `rotateY(${angle}deg)`
+                  }}
+                >
+                  <div className="ring-circle"></div>
+                </div>
+              )
+            })}
+            {/* Latitude lines - horizontal circles rotated around X axis */}
+            {[...Array(9)].map((_, i) => {
+              const latAngle = -80 + (i * 20)
+              const scale = Math.cos(latAngle * Math.PI / 180)
+              return (
+                <div
+                  key={`lat-${i}`}
+                  className="globe-ring latitude-ring"
+                  style={{
+                    transform: `rotateX(${latAngle}deg) scaleY(${scale})`
+                  }}
+                >
+                  <div className="ring-circle"></div>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+        <div className="floating-shape shape-1"></div>
+        <div className="floating-shape shape-2"></div>
+        <div className="floating-shape shape-3"></div>
         <div className="container">
           <motion.h2
             className="section-title"

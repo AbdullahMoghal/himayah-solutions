@@ -7,22 +7,22 @@ const Home = () => {
     {
       title: 'vCISO',
       description: 'Executive-level security leadership at a fraction of the cost',
-      image: '/himayah-solutions-Assets/1.png'
+      image: '/service-icons/vciso-icon.svg'
     },
     {
       title: 'Risk Assessments',
       description: 'Identify gaps, quantify risk, and build a clear path to remediation',
-      image: '/himayah-solutions-Assets/2.png'
+      image: '/service-icons/risk-assessments-icon.svg'
     },
     {
       title: 'Security Architecture',
       description: 'Design and optimize secure cloud and on-prem architectures',
-      image: '/himayah-solutions-Assets/3.png'
+      image: '/service-icons/security-architecture-icon.svg'
     },
     {
       title: 'Compliance & Regulatory',
       description: 'Ensure compliance with evolving regulatory requirements',
-      image: '/himayah-solutions-Assets/4.png'
+      image: '/service-icons/compliance-icon.svg'
     },
   ]
 
@@ -201,7 +201,7 @@ const Home = () => {
               </ul>
             </div>
             <div className="features-image">
-              <img src="/himayah-solutions-Assets/6.png" alt="Security Features" />
+              <img src="/service-icons/security-features-icon.svg" alt="Security Features" />
             </div>
           </motion.div>
         </div>

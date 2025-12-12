@@ -33,8 +33,8 @@ const Header = () => {
       <div className="header-container">
         <Link to="/" className="logo">
           <img 
-            src="/himayah-SVG-assets/8.svg" 
-            alt="Himayah Solutions" 
+            src="/himaya-logos/PNG Version/transparent-logo-white.png" 
+            alt="Himaya Solutions" 
             className="logo-img"
           />
         </Link>
