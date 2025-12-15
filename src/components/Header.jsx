@@ -33,7 +33,7 @@ const Header = () => {
       <div className="header-container">
         <Link to="/" className="logo">
           <img 
-            src="/himaya-logos/PNG Version/transparent-logo-white.png" 
+            src="/logo-white.png" 
             alt="Himaya Solutions" 
             className="logo-img"
           />

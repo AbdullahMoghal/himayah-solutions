@@ -6,23 +6,33 @@ const Home = () => {
   const services = [
     {
       title: 'vCISO',
-      description: 'Executive-level security leadership at a fraction of the cost',
-      image: '/service-icons/vciso-icon.svg'
+      description: 'Strengthen your security program with executive-level leadership at a fraction of the cost of a full-time CISO',
+      image: '/service-icons/vciso-icon.svg',
+      link: '/services/vciso'
     },
     {
-      title: 'Risk Assessments',
-      description: 'Identify gaps, quantify risk, and build a clear path to remediation',
-      image: '/service-icons/risk-assessments-icon.svg'
+      title: 'Enterprise Security',
+      description: 'Security solutions that support digital transformation. Safeguard your digital transformation from start to finish',
+      image: '/service-icons/security-architecture-icon.svg',
+      link: '/services/enterprise-security'
     },
     {
-      title: 'Security Architecture',
-      description: 'Design and optimize secure cloud and on-prem architectures',
-      image: '/service-icons/security-architecture-icon.svg'
+      title: 'Digital Trust & Privacy',
+      description: 'Prioritize trust and safety in all your business interactions—whether through communications, supply chain, or digital products',
+      image: '/service-icons/compliance-icon.svg',
+      link: '/services/digital-trust-privacy'
     },
     {
-      title: 'Compliance & Regulatory',
-      description: 'Ensure compliance with evolving regulatory requirements',
-      image: '/service-icons/compliance-icon.svg'
+      title: 'Cyber Strategy & Transformation',
+      description: 'Align your cyber defenses with your business goals. Stay ahead of evolving threats and build stakeholder confidence',
+      image: '/service-icons/risk-assessments-icon.svg',
+      link: '/services/cyber-strategy-transformation'
+    },
+    {
+      title: 'Cyber Defense & Resilience',
+      description: 'Build a strong defense while preparing for recovery. Thrive in the face of uncertainty with comprehensive protection',
+      image: '/service-icons/security-architecture-icon.svg',
+      link: '/services/cyber-defense-resilience'
     },
   ]
 
@@ -53,11 +63,16 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero">
         <motion.div
-          className="hero-image hero-logo-bg"
+          className="hero-image"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
+          <img 
+            src="/hero-logo.png" 
+            alt="Himaya Solutions" 
+            className="hero-logo-img"
+          />
         </motion.div>
         <motion.div
           className="hero-content"
@@ -123,11 +138,13 @@ const Home = () => {
                 variants={itemVariants}
                 whileHover={{ y: -10, transition: { duration: 0.3 } }}
               >
-                <div className="service-image">
-                  <img src={service.image} alt={service.title} />
-                </div>
-                <h3>{service.title}</h3>
-                <p>{service.description}</p>
+                <Link to={service.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <div className="service-image">
+                    <img src={service.image} alt={service.title} />
+                  </div>
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
+                </Link>
               </motion.div>
             ))}
           </motion.div>

@@ -72,13 +72,17 @@
   max-width: 600px;
   min-height: 500px;
   order: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.hero-logo-bg {
-  background-image: url('/himaya-logos/PNG Version/transparent-text-w-logo-black.png');
-  background-size: 120%;
-  background-position: center;
-  background-repeat: no-repeat;
+.hero-logo-img {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  object-fit: contain;
+  display: block;
 }
 
 /* Buttons */
@@ -177,6 +181,12 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   cursor: pointer;
+}
+
+.service-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .service-card:hover {
@@ -303,10 +313,27 @@
   .hero {
     flex-direction: column;
     text-align: center;
+    padding: 3rem 1.5rem;
+    gap: 2rem;
   }
 
   .hero-title {
     font-size: 2.5rem;
+  }
+
+  .hero-image {
+    min-height: 350px;
+    max-width: 100%;
+    order: 1;
+  }
+
+  .hero-content {
+    order: 2;
+  }
+
+  .hero-logo-img {
+    width: 100%;
+    max-width: 600px;
   }
 
   .features-content {
@@ -319,6 +346,11 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding: 2rem 1rem;
+    min-height: auto;
+  }
+
   .hero-title {
     font-size: 2rem;
   }
@@ -327,12 +359,65 @@
     font-size: 1rem;
   }
 
+  .hero-image {
+    min-height: 300px;
+    order: 1;
+  }
+
+  .hero-content {
+    order: 2;
+  }
+
+  .hero-logo-img {
+    width: 95%;
+    max-width: 500px;
+  }
+
   .section-title {
     font-size: 2rem;
   }
 
   .services-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 1.5rem 1rem;
+    min-height: auto;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hero-image {
+    min-height: 250px;
+    order: 1;
+  }
+
+  .hero-content {
+    order: 2;
+  }
+
+  .hero-logo-img {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
   }
 }
 
