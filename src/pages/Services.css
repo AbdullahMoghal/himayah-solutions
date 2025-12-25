@@ -672,6 +672,9 @@
   padding: 4rem 2rem;
   background-color: #000000;
   color: #ffffff;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .stats-grid {
@@ -679,23 +682,70 @@
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 3rem;
   text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
   .services-stats {
-    padding: 3rem 1.5rem;
+    padding: 3rem 1rem;
+    overflow-x: hidden;
   }
   
   .stats-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
-    max-width: 400px;
+    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  .stat-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-stats {
+    padding: 2.5rem 0.5rem;
+  }
+
+  .stats-grid {
+    padding: 0 0.5rem;
+    gap: 1.5rem;
+  }
+
+  .stat-card {
+    padding: 1rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.95rem;
   }
 }
 
 .stat-card {
   padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .stat-number {
@@ -704,12 +754,17 @@
   margin-bottom: 0.5rem;
   color: #ffffff;
   font-family: 'Poppins', sans-serif;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .stat-label {
   font-size: 1.25rem;
   color: #cccccc;
   font-weight: 400;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.4;
 }
 
 /* Industries Section */
