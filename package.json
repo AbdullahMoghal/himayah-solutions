@@ -4,10 +4,11 @@
   "description": "Himayah Solutions - Cybersecurity Consulting Company",
   "private": true,
   "dependencies": {
+    "@formspree/react": "^3.0.0",
+    "framer-motion": "^10.16.16",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.20.0",
-    "framer-motion": "^10.16.16"
+    "react-router-dom": "^6.20.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
@@ -21,6 +22,3 @@
     "preview": "vite preview"
   }
 }
-
-
-

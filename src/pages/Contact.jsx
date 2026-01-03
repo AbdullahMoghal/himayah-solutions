@@ -1,29 +1,9 @@
-import { useState } from 'react'
+import { useForm, ValidationError } from '@formspree/react'
 import { motion } from 'framer-motion'
 import './Contact.css'
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    message: ''
-  })
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
-    alert('Thank you for your message! We will get back to you soon.')
-    setFormData({ name: '', email: '', company: '', message: '' })
-  }
+  const [state, handleSubmit] = useForm("mnjngzda")
 
   return (
     <div className="contact-page">
@@ -77,60 +57,97 @@ const Contact = () => {
               transition={{ duration: 0.6 }}
             >
               <h2>Send us a Message</h2>
-              <div className="form-group">
-                <label htmlFor="name">Name *</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="email">Email *</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="company">Company</label>
-                <input
-                  type="text"
-                  id="company"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="message">Message *</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="6"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                ></textarea>
-              </div>
-              <button type="submit" className="btn btn-primary btn-large">
-                Send Message
-              </button>
+              
+              {state.succeeded ? (
+                <div style={{ 
+                  padding: '2rem', 
+                  backgroundColor: '#d4edda', 
+                  border: '1px solid #c3e6cb', 
+                  borderRadius: '5px',
+                  color: '#155724',
+                  marginBottom: '2rem'
+                }}>
+                  <h3 style={{ marginTop: 0 }}>Thank you for your message!</h3>
+                  <p>We will get back to you soon.</p>
+                </div>
+              ) : (
+                <>
+                  <div className="form-group">
+                    <label htmlFor="name">Name *</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                    />
+                    <ValidationError 
+                      prefix="Name" 
+                      field="name"
+                      errors={state.errors}
+                    />
+                  </div>
+                  
+                  <div className="form-group">
+                    <label htmlFor="email">Email *</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                    />
+                    <ValidationError 
+                      prefix="Email" 
+                      field="email"
+                      errors={state.errors}
+                    />
+                  </div>
+                  
+                  <div className="form-group">
+                    <label htmlFor="company">Company</label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                    />
+                    <ValidationError 
+                      prefix="Company" 
+                      field="company"
+                      errors={state.errors}
+                    />
+                  </div>
+                  
+                  <div className="form-group">
+                    <label htmlFor="message">Message *</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="6"
+                      required
+                    ></textarea>
+                    <ValidationError 
+                      prefix="Message" 
+                      field="message"
+                      errors={state.errors}
+                    />
+                  </div>
+                  
+                  <button 
+                    type="submit" 
+                    className="btn btn-primary btn-large"
+                    disabled={state.submitting}
+                  >
+                    {state.submitting ? 'Sending...' : 'Send Message'}
+                  </button>
+                  
+                  <ValidationError errors={state.errors} />
+                </>
+              )}
             </motion.form>
           </div>
         </div>
       </section>
-
     </div>
   )
 }
 
 export default Contact
-

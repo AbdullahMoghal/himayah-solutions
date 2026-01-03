@@ -139,11 +139,11 @@ const Home = () => {
                 whileHover={{ y: -10, transition: { duration: 0.3 } }}
               >
                 <Link to={service.link} style={{ textDecoration: 'none', color: 'inherit' }}>
-                  <div className="service-image">
-                    <img src={service.image} alt={service.title} />
-                  </div>
-                  <h3>{service.title}</h3>
-                  <p>{service.description}</p>
+                <div className="service-image">
+                  <img src={service.image} alt={service.title} />
+                </div>
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
                 </Link>
               </motion.div>
             ))}

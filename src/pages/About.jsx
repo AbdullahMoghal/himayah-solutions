@@ -113,8 +113,8 @@ const About = () => {
             <div className="team-member-content">
               <div className="team-member-image">
                 <img 
-                  src="/assets/images/munir-moghal-pfp.png" 
-                  alt="Munir Moghal" 
+                  src="/himaya-logos/PNG Version/transparent-logo-black.png" 
+                  alt="Himaya Solutions Logo" 
                 />
               </div>
               <div className="team-member-info">
@@ -128,13 +128,13 @@ const About = () => {
                     <h4>Key Attributes:</h4>
                     <ul>
                       <li>
-                        <strong>Strategic Leadership and Risk Management</strong> – With over two decades of experience in developing information security strategies and governance roadmaps, provided clients with guidance in identifying and understanding security, privacy, and cyber risks. Developed multi-year cyber defense and resilience strategies, including metrics and reporting solutions. Proven ability to manage and engage senior stakeholders, including CROs, Chief Legal Counsels, Chief Auditors, CIOs, and CTOs. Managed and secured data for large-scale Fortune 1000 corporations, as well as federal and state government clients.
+                        <strong>Strategic Leadership and Risk Management</strong> With over two decades of experience in developing information security strategies and governance roadmaps, provided clients with guidance in identifying and understanding security, privacy, and cyber risks. Developed multi-year cyber defense and resilience strategies, including metrics and reporting solutions. Proven ability to manage and engage senior stakeholders, including CROs, Chief Legal Counsels, Chief Auditors, CIOs, and CTOs. Managed and secured data for large-scale Fortune 1000 corporations, as well as federal and state government clients.
                       </li>
                       <li>
-                        <strong>Deep Technical, Industry and Cybersecurity Expertise</strong> – Highly skilled and specialized in technology and management consulting, with business and industry expertise spanning technology, finance, insurance, healthcare, life sciences, education, government, consumer, and industrial products. Possessing a proven skill set encompassing a broad range of information security services, along with expertise in digital transformation, program management, and extended enterprise security.
+                        <strong>Deep Technical, Industry and Cybersecurity Expertise</strong> Highly skilled and specialized in technology and management consulting, with business and industry expertise spanning technology, finance, insurance, healthcare, life sciences, education, government, consumer, and industrial products. Possessing a proven skill set encompassing a broad range of information security services, along with expertise in digital transformation, program management, and extended enterprise security.
                       </li>
                       <li>
-                        <strong>Regulatory Compliance</strong> – Extensive experience in guiding companies through the identification of regulatory requirements to build effective risk management programs. Proficient in leading industry frameworks and regulatory standards, including NIST, NYDFS, DORA, EU AI Act, SEC rules, HIPAA, PCI, SOX/SOC, and ISO 27002 & 17799.
+                        <strong>Regulatory Compliance</strong> Extensive experience in guiding companies through the identification of regulatory requirements to build effective risk management programs. Proficient in leading industry frameworks and regulatory standards, including NIST, NYDFS, DORA, EU AI Act, SEC rules, HIPAA, PCI, SOX/SOC, and ISO 27002 & 17799.
                       </li>
                     </ul>
                   </div>
